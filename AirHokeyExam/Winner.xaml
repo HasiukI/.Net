@@ -1,0 +1,25 @@
+﻿<Window x:Class="AirHokeyExam.Winner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirHokeyExam"
+        mc:Ignorable="d"
+        Title="Winner" Height="200" Width="400"
+        WindowStyle="None"
+        AllowsTransparency="True">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="image/winner.png"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="winnertxt" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Foreground="White"> Player1</TextBlock>
+        <Border Margin="10 0 10 160" Background="LightBlue" CornerRadius="20" Grid.Column="1" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave" MouseLeftButtonUp="Border_MouseLeftButtonUp">
+            <Image Margin="10" Source="image/close.png"/>
+        </Border>
+    </Grid>
+</Window>
