@@ -1,0 +1,16 @@
+C:\Hasiuk\Study\net\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.csproj.AssemblyReference.cache
+C:\Hasiuk\Study\net\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.csproj.SuggestedBindingRedirects.cache
+C:\Hasiuk\Study\net\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.csproj.CoreCompileInputs.cache
+C:\Hasiuk\Study\net\Exam\Safe_and_Read\bin\Debug\Safe_and_Read.exe.config
+C:\Hasiuk\Study\net\Exam\Safe_and_Read\bin\Debug\Safe_and_Read.exe
+C:\Hasiuk\Study\net\Exam\Safe_and_Read\bin\Debug\Safe_and_Read.pdb
+C:\Hasiuk\Study\net\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.exe
+C:\Hasiuk\Study\net\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.pdb
+C:\Users\Ілля\Desktop\Exam\Safe_and_Read\bin\Debug\Safe_and_Read.exe.config
+C:\Users\Ілля\Desktop\Exam\Safe_and_Read\bin\Debug\Safe_and_Read.exe
+C:\Users\Ілля\Desktop\Exam\Safe_and_Read\bin\Debug\Safe_and_Read.pdb
+C:\Users\Ілля\Desktop\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.csproj.AssemblyReference.cache
+C:\Users\Ілля\Desktop\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ілля\Desktop\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.csproj.CoreCompileInputs.cache
+C:\Users\Ілля\Desktop\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.exe
+C:\Users\Ілля\Desktop\Exam\Safe_and_Read\obj\Debug\Safe_and_Read.pdb
