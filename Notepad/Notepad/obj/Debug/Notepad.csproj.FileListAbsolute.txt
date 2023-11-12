@@ -1,0 +1,16 @@
+C:\Hasiuk\Study\WPF\Notepad\Notepad\bin\Debug\Notepad.exe.config
+C:\Hasiuk\Study\WPF\Notepad\Notepad\bin\Debug\Notepad.exe
+C:\Hasiuk\Study\WPF\Notepad\Notepad\bin\Debug\Notepad.pdb
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad.csproj.AssemblyReference.cache
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad.csproj.SuggestedBindingRedirects.cache
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\MainWindow.g.cs
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\App.g.cs
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad_MarkupCompile.cache
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad_MarkupCompile.lref
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\MainWindow.baml
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad.g.resources
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.cache
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad.exe
+C:\Hasiuk\Study\WPF\Notepad\Notepad\obj\Debug\Notepad.pdb

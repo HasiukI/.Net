@@ -1,0 +1,16 @@
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\bin\Debug\sdfsdf.exe.config
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\bin\Debug\sdfsdf.exe
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\bin\Debug\sdfsdf.pdb
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf.csproj.AssemblyReference.cache
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf.csproj.SuggestedBindingRedirects.cache
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\MainWindow.g.cs
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\App.g.cs
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf_MarkupCompile.cache
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf_MarkupCompile.lref
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\MainWindow.baml
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf.g.resources
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf.Properties.Resources.resources
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf.csproj.GenerateResource.cache
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf.csproj.CoreCompileInputs.cache
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf.exe
+C:\Hasiuk\Study\WPF\Notepad\sdfsdf\obj\Debug\sdfsdf.pdb
