@@ -1,0 +1,60 @@
+﻿<Window x:Class="Sys_homework_1.DispatherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sys_homework_1.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="DispatherWindow" Height="450" Width="800"
+        Closing="Window_Closing"
+        >
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding KillTimer}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Window.DataContext>
+        <local:ViewModelcs />
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Background="#242425" Grid.Column="0" ItemsSource="{Binding Processes}"
+                 SelectedItem="{Binding CurentProcces}"
+                 HorizontalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate >
+                    <Border Background="#49494b" CornerRadius="2">
+                        <TextBlock Margin="5" Foreground="White" Text="{Binding ProcessName}" />
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Grid Background="#242425" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock FontSize="24" Foreground="White" VerticalAlignment="Center" Grid.Row="0" Text="{Binding CurentProcces.Id}"/>
+            <TextBlock FontSize="24" Foreground="White" VerticalAlignment="Center" Grid.Row="1" Text="{Binding CurentProcces.StartTime}"/>
+            <TextBlock FontSize="24" Foreground="White" VerticalAlignment="Center"  Grid.Row="2" Text="{Binding CurentProcces.TotalProcessorTime}"/>
+            <TextBlock FontSize="24" Foreground="White" VerticalAlignment="Center"  Grid.Row="3" Text="{Binding CurentProcces.Threads}"/>
+            <TextBlock FontSize="24" Foreground="White" VerticalAlignment="Center"  Grid.Row="4" Text="{Binding ProccesCount}"/>
+
+            <Button Margin="300 10 10 10" Content="Виключити" Grid.Row="5" Command="{Binding KillProcces}"/>
+
+        </Grid>
+       
+    </Grid>
+    
+</Window>
