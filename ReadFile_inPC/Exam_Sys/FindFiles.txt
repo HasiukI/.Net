@@ -9,3 +9,9 @@
 Файл: test2.txt_copy.txt | 
 Файл: test3.txt_copy.txt | 
 Файл: С#.txt_copy.txt | 
+Файл: mama.txt_copy.txt | Найдено <Ярина>   раз: 1 | 
+Файл: test.txt_copy.txt | Найдено <Ярина>   раз: 0 | 
+Файл: test1.txt_copy.txt | Найдено <Ярина>   раз: 0 | 
+Файл: test2.txt_copy.txt | Найдено <Ярина>   раз: 0 | 
+Файл: test3.txt_copy.txt | Найдено <Ярина>   раз: 0 | 
+Файл: С#.txt_copy.txt | Найдено <Ярина>   раз: 0 | 

@@ -27,3 +27,32 @@ C:\Hasiuk\Study\Системне програмування\Exam_Sys\Exam_Sys\bi
 C:\Hasiuk\Study\Системне програмування\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Extras.xml
 C:\Hasiuk\Study\Системне програмування\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
 C:\Hasiuk\Study\Системне програмування\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\Exam_Sys.exe.config
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\Exam_Sys.exe
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\Exam_Sys.pdb
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\BLL.dll
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\CommonServiceLocator.dll
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\System.Windows.Interactivity.dll
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\BLL.pdb
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys.csproj.AssemblyReference.cache
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\MainWindow.g.cs
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\App.g.cs
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys_MarkupCompile.cache
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys_MarkupCompile.lref
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\MainWindow.baml
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys.g.resources
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys.Properties.Resources.resources
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys.csproj.GenerateResource.cache
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys.csproj.CoreCompileInputs.cache
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys.csproj.CopyComplete
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys.exe
+C:\Hasiuk\GitHub\.Net\ReadFile_inPC\Exam_Sys\Exam_Sys\obj\Debug\Exam_Sys.pdb
