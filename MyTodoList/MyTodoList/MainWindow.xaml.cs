@@ -24,5 +24,15 @@ namespace MyTodoList
         {
             InitializeComponent();
         }
+
+        private void mainMenuMinimazation_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void mainMenuClose_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
