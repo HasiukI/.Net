@@ -18,5 +18,3 @@ C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger
 C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger\obj\Debug\net6.0-windows\Client_LocalMessenger.pdb
 C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger\obj\Debug\net6.0-windows\Client_LocalMessenger.genruntimeconfig.cache
 C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger\obj\Debug\net6.0-windows\ref\Client_LocalMessenger.dll
-C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger\obj\Debug\net6.0-windows\Pages\LoginPage.g.cs
-C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger\obj\Debug\net6.0-windows\Pages\LoginPage.baml

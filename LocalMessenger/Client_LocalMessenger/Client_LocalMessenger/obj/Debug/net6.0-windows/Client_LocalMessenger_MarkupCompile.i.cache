@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger\App.xaml
-21755149966
+11407045341
 
-6-2102786691
+5-1659557019
 194726069201
-MainWindow.xaml;Pages\LoginPage.xaml;
+MainWindow.xaml;
 
-True
+False
 

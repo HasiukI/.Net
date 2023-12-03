@@ -6,16 +6,13 @@
         xmlns:local="clr-namespace:Client_LocalMessenger"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
-        <Storyboard x:Key="loginstart"/>
-    </Window.Resources>
+    
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Left" Height="56" Margin="100,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"><Run Text="Login"/><LineBreak/><Run/></TextBlock>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="136" Margin="63,217,0,0"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Height="84" Margin="10,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="281"><Run Text="Messanger"/><LineBreak/><Run/></TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Click="Button_Click" Width="100" Height="70">start Listen ip</Button>
+        <TextBlock Grid.Row="1" Name="tb"></TextBlock>
     </Grid>
 </Window>
