@@ -7,4 +7,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Data_LocalMessenger">
+      <HintPath>..\..\Data_LocalMessenger\Data_LocalMessenger\bin\Debug\net6.0\Data_LocalMessenger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

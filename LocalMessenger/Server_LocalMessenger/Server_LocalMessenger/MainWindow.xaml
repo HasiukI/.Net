@@ -25,6 +25,10 @@
             <TextBlock x:Name="tbPortMain" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Port: "/>
 
         </Grid>
-        <Button Grid.Column="1" Click="Button_Click">start listen</Button>
+        <StackPanel Grid.Column="1">
+            <Button Click="Button_Click" Height="30">start send</Button>
+            <Button Click="Button_Click_1" Height="30">start listen</Button>
+        </StackPanel>
+        
     </Grid>
 </Window>

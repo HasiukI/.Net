@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Data_LocalMessenger;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -26,6 +30,7 @@ namespace Server_LocalMessenger
     public partial class MainWindow : Window
     {
         TcpListener listener = null;
+        BinaryFormatter formatter = null;
         string address = string.Empty;
         int port = 8888;
 
@@ -35,6 +40,7 @@ namespace Server_LocalMessenger
         public MainWindow()
         {
             InitializeComponent();
+            formatter = new BinaryFormatter();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -78,8 +84,28 @@ namespace Server_LocalMessenger
             }
         }
 
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			listener = new TcpListener(IPAddress.Parse(address), port);
+			listener.Start();
 
+			try
+			{
+				TcpClient client = listener.AcceptTcpClient();
+				NetworkStream network = client.GetStream();
+				StreamReader reader = null;
+                while (true)
+                {
+                    if (!network.DataAvailable) continue;
+                    reader = new StreamReader(network, Encoding.UTF8);
 
-       
-    }
+                    Message message = (Message)formatter.Deserialize(reader.BaseStream);
+                }
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Listen: " + ex.Message);
+			}
+		}
+	}
 }

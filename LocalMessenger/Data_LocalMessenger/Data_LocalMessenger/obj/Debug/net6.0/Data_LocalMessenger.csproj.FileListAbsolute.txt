@@ -1,0 +1,11 @@
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\bin\Debug\net6.0\Data_LocalMessenger.deps.json
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\bin\Debug\net6.0\Data_LocalMessenger.dll
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\bin\Debug\net6.0\Data_LocalMessenger.pdb
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\obj\Debug\net6.0\Data_LocalMessenger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\obj\Debug\net6.0\Data_LocalMessenger.AssemblyInfoInputs.cache
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\obj\Debug\net6.0\Data_LocalMessenger.AssemblyInfo.cs
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\obj\Debug\net6.0\Data_LocalMessenger.csproj.CoreCompileInputs.cache
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\obj\Debug\net6.0\Data_LocalMessenger.dll
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\obj\Debug\net6.0\refint\Data_LocalMessenger.dll
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\obj\Debug\net6.0\Data_LocalMessenger.pdb
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Data_LocalMessenger\Data_LocalMessenger\obj\Debug\net6.0\ref\Data_LocalMessenger.dll

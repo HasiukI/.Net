@@ -18,3 +18,7 @@ C:\Hasiuk\GitHub\.Net\LocalMessenger\Server_LocalMessenger\Server_LocalMessenger
 C:\Hasiuk\GitHub\.Net\LocalMessenger\Server_LocalMessenger\Server_LocalMessenger\obj\Debug\net6.0-windows\Server_LocalMessenger.pdb
 C:\Hasiuk\GitHub\.Net\LocalMessenger\Server_LocalMessenger\Server_LocalMessenger\obj\Debug\net6.0-windows\Server_LocalMessenger.genruntimeconfig.cache
 C:\Hasiuk\GitHub\.Net\LocalMessenger\Server_LocalMessenger\Server_LocalMessenger\obj\Debug\net6.0-windows\ref\Server_LocalMessenger.dll
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Server_LocalMessenger\Server_LocalMessenger\bin\Debug\net6.0-windows\Data_LocalMessenger.dll
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Server_LocalMessenger\Server_LocalMessenger\bin\Debug\net6.0-windows\Data_LocalMessenger.pdb
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Server_LocalMessenger\Server_LocalMessenger\obj\Debug\net6.0-windows\Server_LocalMessenger.csproj.AssemblyReference.cache
+C:\Hasiuk\GitHub\.Net\LocalMessenger\Server_LocalMessenger\Server_LocalMessenger\obj\Debug\net6.0-windows\Server_LocalMessenger.csproj.CopyComplete
