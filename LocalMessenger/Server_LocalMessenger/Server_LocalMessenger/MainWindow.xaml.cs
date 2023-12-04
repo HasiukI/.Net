@@ -50,6 +50,8 @@ namespace Server_LocalMessenger
                         break;
                     }
                 }
+                tbAddressMain.Text += address;
+                tbPortMain.Text += port.ToString();
                 Task.Run(SendIP);
 
 

@@ -16,6 +16,15 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button Click="Button_Click">start listen</Button>
+        <Grid Grid.Row="0" Grid.Column="0" Margin="10 0 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="tbAddressMain" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="Address: " />
+            <TextBlock x:Name="tbPortMain" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Port: "/>
+
+        </Grid>
+        <Button Grid.Column="1" Click="Button_Click">start listen</Button>
     </Grid>
 </Window>
