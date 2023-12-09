@@ -27,8 +27,24 @@
         </Grid>
         <StackPanel Grid.Column="1">
             <Button Click="Button_Click" Height="30">start send</Button>
-            <Button Click="Button_Click_1" Height="30">start listen</Button>
         </StackPanel>
-        
+        <Grid Grid.Row="1" Margin="10" Background="#FF6A9FD2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Left"  Margin="10,0,0,0" TextWrapping="Wrap" Text="Усі активні користувачі: " VerticalAlignment="Center" Foreground="#FFFFF0F0" FontSize="24" FontWeight="Bold"  />
+            <ListBox Grid.Row="1" Margin="0,0,5,0"  x:Name="lbAllUser">
+                <ListBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0.168"/>
+                        <GradientStop Color="#FF06A2A9" Offset="0.517"/>
+                    </LinearGradientBrush>
+                </ListBox.Background>
+            </ListBox>
+        </Grid>
+
+
+
     </Grid>
 </Window>

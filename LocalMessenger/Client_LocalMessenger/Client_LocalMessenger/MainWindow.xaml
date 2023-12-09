@@ -5,59 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client_LocalMessenger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{RelativeSource Self}"
+        Closing="Window_Closing">
+
     <Window.Resources>
         <Storyboard x:Key="GoToLogin">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-808"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-2024"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-2024"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-25.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-25.333"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-800"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="8"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-798"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="4"/>
-            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="GoToMessenger">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-797.333"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-1606.666"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="2.667"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-4"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-808"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-802.667"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="5.333"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-10.667"/>
-            </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-808"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-1604"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7510000" Value="-1412"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-1412"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="grid1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="12"/>
-                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7510000" Value="4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="4"/>
             </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="grid1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.7500000" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
 
@@ -69,9 +52,10 @@
             <BeginStoryboard Storyboard="{StaticResource GoToMessenger}"/>
         </EventTrigger>
     </Window.Triggers>
-    
+
     <Grid Background="Bisque">
-        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+        <!--Visibility="Hidden"-->
+        <Grid  Panel.ZIndex="3" x:Name="grid" RenderTransformOrigin="0.5,0.5" Margin="10,10,10,10" Background="#FF3BA1E7">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -84,8 +68,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="tbWait" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="46">Wait</TextBlock>
-            <Grid Grid.Row="1">
+            <TextBlock x:Name="tbWait"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="46">Wait</TextBlock>
+            <Grid   Grid.Row="1" Margin="10,10,10,10"  Background="#FF3BA1E7">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -96,11 +80,11 @@
                         <Image Source="C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger\images\arrow-right.png"></Image>
                     </Button>
                 </Border>
-              
+
             </Grid>
-          
         </Grid>
-        <Grid x:Name="grid1" Margin="805,0,-805,0" RenderTransformOrigin="0.5,0.5">
+
+        <Grid Panel.ZIndex="2" x:Name="grid1" Margin="10,10,10,10"  RenderTransformOrigin="0.5,0.5" Background="#FF3BA1E7">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -117,9 +101,21 @@
 
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="46">Login</TextBlock>
             <TextBox  Width="100" Height="50" Grid.Row="1" x:Name="tbLogin"></TextBox>
-            <Button x:Name="btGoMessanger" Click="btLogin_Click" Grid.Row="2" Width="40" Height="30" ></Button>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button  Click="btLogin_Click" Grid.Row="2" Width="40" Height="30"></Button>
+                <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Width="100" Height="50">
+                    <Button x:Name="btGoMessanger"  Cursor="Hand" BorderThickness="0" Background="Transparent"  Visibility="Visible">
+                        <Image Source="C:\Hasiuk\GitHub\.Net\LocalMessenger\Client_LocalMessenger\Client_LocalMessenger\images\arrow-right.png"></Image>
+                    </Button>
+                </Border>
+            </Grid>
         </Grid>
-        <Grid x:Name="grid2" Margin="1605,0,-1605,0" RenderTransformOrigin="0.5,0.5">
+
+        <Grid Panel.ZIndex="1" x:Name="grid2" RenderTransformOrigin="0.5,0.5" Background="#FF3BA1E7">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -128,7 +124,39 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="46">Messenger</TextBlock>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox x:Name="lbUsers" Grid.Column="0"  >
+               
+            </ListBox>
+            <Grid Background="BlueViolet" Grid.Column="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.15*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel x:Name="place" Margin="5" Background="DarkGray">
+                    
+                </StackPanel>
+                <Border Grid.Row="1" Margin="2" Background="White" CornerRadius="20">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.2*"/>
+                            <ColumnDefinition Width="0.2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox x:Name="tbSend" LostFocus="AddTextBlock_LostFocus"  GotFocus="CleanTextBlock_GotFocus" Foreground="Black">Введіть повідомлення...</TextBox>
+                        <TextBlock Grid.Column="1">фалй</TextBlock>
+                        <Button Click="CreateMessageButton_Click" Grid.Column="2">Send</Button>
+                    </Grid>
+                </Border>
+            </Grid>
+
         </Grid>
+
     </Grid>
 </Window>

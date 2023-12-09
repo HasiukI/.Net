@@ -21,6 +21,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Server_LocalMessenger
 {
@@ -30,18 +31,23 @@ namespace Server_LocalMessenger
     public partial class MainWindow : Window
     {
         TcpListener listener = null;
-        BinaryFormatter formatter = null;
+		Semaphore semaphore = new Semaphore(3, 10);
+
+		BinaryFormatter formatter = null;
+
         string address = string.Empty;
         int port = 8888;
 
+        List<User> users;
+		List<History> history;
 
-        Semaphore semaphore = new Semaphore(3, 10);
-
-        public MainWindow()
+		public MainWindow()
         {
             InitializeComponent();
             formatter = new BinaryFormatter();
-        }
+			users = new List<User>();
+			history = new List<History>();
+		}
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -58,8 +64,12 @@ namespace Server_LocalMessenger
                 }
                 tbAddressMain.Text += address;
                 tbPortMain.Text += port.ToString();
-                Task.Run(SendIP);
 
+				listener = new TcpListener(IPAddress.Parse(address), port);
+				listener.Start();
+
+				Task.Run(SendIP);
+                Task.Run(WaitOneClient);
 
             }
             catch (Exception ex)
@@ -83,29 +93,240 @@ namespace Server_LocalMessenger
                 System.Threading.Thread.Sleep(10000);
             }
         }
-
-		private void Button_Click_1(object sender, RoutedEventArgs e)
-		{
-			listener = new TcpListener(IPAddress.Parse(address), port);
-			listener.Start();
-
+        private async Task WaitOneClient()
+        {
+            while (true)
+            {
+				semaphore.WaitOne();
+                Task.Run(ListenAsync);
+			}
+        }
+        private async Task ListenAsync()
+        {
 			try
 			{
-				TcpClient client = listener.AcceptTcpClient();
+				TcpClient client = await listener.AcceptTcpClientAsync();
 				NetworkStream network = client.GetStream();
 				StreamReader reader = null;
-                while (true)
-                {
-                    if (!network.DataAvailable) continue;
-                    reader = new StreamReader(network, Encoding.UTF8);
 
-                    Message message = (Message)formatter.Deserialize(reader.BaseStream);
-                }
+				while (true)
+				{
+					if (!network.DataAvailable) continue;
+					reader = new StreamReader(network, Encoding.UTF8);
+
+					Message message = (Message)formatter.Deserialize(reader.BaseStream);
+
+                    switch (message.Command)
+                    {
+                        case CommandMessage.Login:
+                            string usersOnline = CommandLogin(message, client);
+
+							Message toSend = new Message()
+							{
+								TextMessage = usersOnline,
+								To = string.Empty,
+								CreatedAt = DateTime.Now,
+								From = "Server",
+							};
+
+                            if (usersOnline!=null)
+							{
+								toSend.Command = CommandMessage.Refresh;
+								SendGroupMessage(toSend);
+							}
+							else
+							{
+								toSend.Command = CommandMessage.Negative;
+								SendMessage(toSend, client);
+							}
+							break;
+						case CommandMessage.ReturnHistory:
+							History history =  GetHistory(message);
+
+							Message toSendH = new Message()
+							{
+								TextMessage = "History",
+								CreatedAt = DateTime.Now,
+								To = message.To,
+								From = message.From,
+								Command = CommandMessage.ReturnHistory,
+								HistoryMessages = history.HistoryMessage, 
+							};
+							SendMessage(toSendH, client);
+							break;
+						case CommandMessage.Send:
+							List<HistoryMessages> hm=	NewMessage(message);
+
+							Message toSendM = new Message()
+							{
+								TextMessage = "History",
+								CreatedAt = DateTime.Now,
+								To = message.To,
+								From = message.From,
+								Command = CommandMessage.ReturnHistory,
+								HistoryMessages = hm,
+							};
+							SendMessage(toSendM, client);
+							SendMessage(toSendM, users.Where(u => u.Name == message.To).FirstOrDefault().Client);
+							break;
+						case CommandMessage.End:
+							DeleteUser(message);
+							break;
+                    }
+				}
+
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show("Listen: " + ex.Message);
 			}
 		}
+
+	
+
+		#region Messages
+		private void SendGroupMessage(Message toSend)
+		{
+			foreach (var user in users)
+			{
+				if (user.Name.Equals(toSend.From)) continue;
+					SendMessage(toSend, user.Client);
+			}
+		}
+
+		private void SendMessage(Message toSend, TcpClient socket)
+		{
+			try
+			{
+				using (MemoryStream ms = new MemoryStream())
+				{
+					formatter.Serialize(ms, toSend);
+					NetworkStream network = socket.GetStream();
+					network.Write(ms.ToArray(), 0, (int)ms.Length);
+					network.Flush();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("SendMessage: " + ex.Message);
+			}
+		}
+
+		#endregion
+
+
+		#region Command
+		private void DeleteUser(Message message)
+		{
+			try
+			{
+				users.Remove(users.Find(u => u.Name == message.From));
+				DeleteUserUI(message.From);
+
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("Server DeleteUser\n" + ex.Message);
+			}
+		
+		}
+
+		private List<HistoryMessages> NewMessage(Message message)
+		{
+			try
+			{
+				History hm = GetHistory(message); 
+
+				if (hm == null)
+				{
+					throw new Exception("Object null reference");
+				}
+
+				hm.HistoryMessage.Add(new HistoryMessages() { Message = message.TextMessage });
+				return hm.HistoryMessage;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Server NewMessage\n" + ex.Message);
+			}
+			return null;
+		}
+
+		private string CommandLogin(Message message, TcpClient client)
+		{
+			if (!users.Any(u => u.Name == message.From))
+			{
+				users.Add(new User() { Name = message.From, Client = client });
+				string str = "";
+
+	  		    foreach( string u in users.Select(user => user.Name).ToList())
+				{
+					str += u+"&";
+				}
+				AddOnlineUser(message.From);
+				return str;
+			}
+
+			return null;
+		}
+
+		private History GetHistory(Message message)
+		{
+			try
+			{
+				History hm1 = history.Where(u1 => u1.User1 == message.From).ToList().Find(u2 => u2.User2 == message.To);
+				History hm2 = history.Where(u1 => u1.User2 == message.From).ToList().Find(u2 => u2.User1 == message.To);
+
+				if (hm1 == null && hm2 == null)
+				{
+					hm1 = new History()
+					{
+						User1 = message.From,
+						User2 = message.To,
+						HistoryMessage = new List<HistoryMessages>()
+					};
+					history.Add(hm1);
+					return hm1;
+				}
+				if (hm1 != null && hm2 == null)
+					return hm1;
+				if (hm1 == null && hm2 != null)
+					return hm2;
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("Server GetHustory\n" + ex.Message);
+			}
+			return null;
+		}
+
+		#endregion
+
+		#region Decorate
+		private void AddOnlineUser(string name)
+		{
+			Dispatcher.Invoke(() =>
+			{
+				ListBoxItem item = new ListBoxItem() { Tag = name };
+				TextBlock textBlock = new TextBlock() { Text= name, HorizontalAlignment=HorizontalAlignment.Center, VerticalAlignment= VerticalAlignment.Center};
+				item.Content = textBlock;
+				lbAllUser.Items.Add(item);
+			});
+		}
+		private void DeleteUserUI(string name)
+		{
+			Dispatcher.Invoke(() =>
+			{
+				foreach(var item in lbAllUser.Items)
+				{
+					if((item as ListBoxItem).Tag.ToString() == name)
+					{
+						lbAllUser.Items.Remove(item);
+						break;
+					}
+				}
+			});
+		}
+		#endregion
 	}
 }
