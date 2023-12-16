@@ -169,6 +169,21 @@ namespace Server_LocalMessenger
 							SendMessage(toSendM, client);
 							SendMessage(toSendM, users.Where(u => u.Name == message.To).FirstOrDefault().Client);
 							break;
+						case CommandMessage.SendFile:
+                            List<HistoryMessages> hf = NewMessage(message);
+
+                            Message toSendF = new Message()
+                            {
+                                TextMessage = "History",
+                                CreatedAt = DateTime.Now,
+                                To = message.To,
+                                From = message.From,
+                                Command = CommandMessage.ReturnHistory,
+                                HistoryMessages = hf,
+                            };
+                            SendMessage(toSendF, client);
+                            SendMessage(toSendF, users.Where(u => u.Name == message.To).FirstOrDefault().Client);
+                            break;
 						case CommandMessage.End:
 							DeleteUser(message);
 							break;
@@ -242,8 +257,11 @@ namespace Server_LocalMessenger
 					throw new Exception("Object null reference");
 				}
 
-				hm.HistoryMessage.Add(new HistoryMessages() { Message = message.TextMessage });
-				return hm.HistoryMessage;
+				if(message.TextMessage!=string.Empty)
+					hm.HistoryMessage.Add(new HistoryMessages() { Message = message.TextMessage, UserName = message.From });
+				else
+                    hm.HistoryMessage.Add(new HistoryMessages() { FileName = message.FileName, bytes = message.FileData, UserName=message.From });
+                return hm.HistoryMessage;
 			}
 			catch (Exception ex)
 			{
@@ -327,6 +345,45 @@ namespace Server_LocalMessenger
 				}
 			});
 		}
-		#endregion
-	}
+        #endregion
+
+        private void Border_MouseEnter(object sender, MouseEventArgs e)
+        {
+			(sender as Border).BorderBrush = Brushes.DarkBlue;
+        }
+
+        private void Border_MouseLeave(object sender, MouseEventArgs e)
+        {
+            (sender as Border).BorderBrush = Brushes.Transparent;
+        }
+
+        private void Start(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                var host = Dns.GetHostAddresses(Dns.GetHostName());
+                foreach (var ip in host)
+                {
+                    if (ip.AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        address = ip.ToString();
+                        break;
+                    }
+                }
+                tbAddressMain.Text += address;
+                tbPortMain.Text += port.ToString();
+
+                listener = new TcpListener(IPAddress.Parse(address), port);
+                listener.Start();
+
+                Task.Run(SendIP);
+                Task.Run(WaitOneClient);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Server Listen click " + ex.Message);
+            }
+        }
+    }
 }

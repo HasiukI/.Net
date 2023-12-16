@@ -16,24 +16,29 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Grid.Column="0" Margin="10 0 0 0">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <TextBlock x:Name="tbAddressMain" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="Address: " />
-            <TextBlock x:Name="tbPortMain" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Port: "/>
+        <Border Background="#FF03182D" Margin="10" CornerRadius="10"  Grid.Row="0" Grid.Column="0">
+            <Grid Margin="10 0 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock  Foreground="White" x:Name="tbAddressMain" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="Address: " />
+                <TextBlock  Foreground="White" x:Name="tbPortMain" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Port: "/>
+            </Grid>
+        </Border>
 
-        </Grid>
-        <StackPanel Grid.Column="1">
-            <Button Click="Button_Click" Height="30">start send</Button>
-        </StackPanel>
-        <Grid Grid.Row="1" Margin="10" Background="#FF6A9FD2" >
+
+        <Border  Grid.Column="1" MouseLeftButtonUp="Start" Background="#FF03182D" Margin="10" CornerRadius="10" BorderThickness="2" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave">
+            <TextBlock  Text="Start" Foreground="White" FontSize="32" FontWeight="Bold" FontFamily="Impact" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+        <!--<Button Grid.Column="1" Click="Button_Click" Height="30">start send</Button>-->
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="2"  Margin="10" Background="#FF6A9FD2" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock HorizontalAlignment="Left"  Margin="10,0,0,0" TextWrapping="Wrap" Text="Усі активні користувачі: " VerticalAlignment="Center" Foreground="#FFFFF0F0" FontSize="24" FontWeight="Bold"  />
+            <TextBlock  HorizontalAlignment="Left"  Margin="10,0,0,0" TextWrapping="Wrap" Text="Усі активні користувачі: " VerticalAlignment="Center" Foreground="#FFFFF0F0" FontSize="24" FontWeight="Bold"  />
             <ListBox Grid.Row="1" Margin="0,0,5,0"  x:Name="lbAllUser">
                 <ListBox.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

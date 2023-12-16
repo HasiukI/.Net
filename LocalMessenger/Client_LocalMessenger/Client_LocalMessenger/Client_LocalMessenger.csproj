@@ -8,9 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BackGround.jpg" />
+    <None Remove="cross.png" />
+    <None Remove="paper-plane.png" />
+    <None Remove="plus.png" />
+    <None Remove="send.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Data_LocalMessenger">
       <HintPath>..\..\Data_LocalMessenger\Data_LocalMessenger\bin\Debug\net6.0\Data_LocalMessenger.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BackGround.jpg" />
+    <Resource Include="cross.png" />
+    <Resource Include="paper-plane.png" />
+    <Resource Include="plus.png" />
+    <Resource Include="send.png" />
   </ItemGroup>
 
 </Project>

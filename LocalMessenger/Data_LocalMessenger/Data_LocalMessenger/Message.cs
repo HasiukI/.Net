@@ -26,6 +26,7 @@
 	public enum CommandMessage{
 		Login,
 		Send,
+		SendFile,
 		ReturnHistory,
 
 		End,
